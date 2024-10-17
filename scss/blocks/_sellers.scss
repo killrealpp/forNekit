@@ -1,0 +1,124 @@
+.sellers {
+    padding-top: 40px;
+    background-color: #fff;
+
+    &__top {
+        padding-bottom: 40px;
+
+        &1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        &2 {
+            width: 266px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-btn {
+            white-space: nowrap;
+            width: 201px;
+            padding: 12px 56px 12px 28px;
+        }
+
+        &-items {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.sellers__content {
+    border-radius: 20px;
+    background: rgb(255, 183, 117);
+    padding: 64px 85px 34px;
+}
+
+.sellers__bottom{
+    &-title1{
+        margin-bottom: 2px;
+        z-index: 1;
+        position: relative;
+    }
+    &-title2{
+        margin-bottom: 8px;
+        z-index: 1;
+        position: relative;
+    }
+    &-text{
+        max-width: 300px;
+        margin-bottom: 42px;
+        z-index: 1;
+        position: relative;
+    }
+    &-button{
+        margin-right: 20px;
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.pos{
+    position: relative;
+}
+
+.sellers__bottom{
+    &-img1{
+        position: absolute;
+        top: -65px;
+        left: -85px;
+        border-radius: 20px;
+    }
+    &-img2{
+        position: absolute;
+        bottom: -55px;
+        right: -85px;
+        border-radius: 20px;
+    }
+    &-img3{
+        position: absolute;
+        top: -65px;
+        right: -60px;
+        border-radius: 20px;
+    }
+}
+
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+    li{
+        padding: 0 5px;
+        line-height: 0;
+        button{
+            padding: 0;
+            font-size: 0;
+            background-color: transparent;
+            width: 26px;
+            height: 26px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $main-color;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &.slick-active{
+            button{
+                border-color: $main-color;
+                background-color: red;
+            }
+        }
+    }
+}

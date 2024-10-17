@@ -1,0 +1,138 @@
+//COLORS
+$bg-color:#fff;
+$main-color:rgb(0, 52, 89); /*default*/
+$accent-color:#c76262;
+$text-color:rgb(36, 43, 51);
+$title-color:rgb(0, 42, 72);
+$cart-title:rgb(0, 23, 31);
+$cart-text: rgb(102, 116, 121);
+$link-color:#000;
+$link-Bgcolor:#000;
+$input-color:#000;
+$input-Bgcolor:#000;
+$textarea-color:#563563;
+$textarea-Bgcolor:#563563;
+$button-color:#563563;
+$button-Bgcolor:#563563;
+
+//CONTAINER
+$padding-container:0px 15px;
+$maxWidth-container:1200px;
+
+//PADDING
+@mixin padding($pt,$pr,$pb,$pl){
+    padding:$pt $pr $pb $pl;
+}
+
+
+//MIN-HEIGHT
+$minHeight-btn:60px;
+$minHeight-link:60px;
+$minHeight-textarea:60px;
+$minHeight-input:60px;
+
+//BORDER
+@mixin border($borderWidth,$borderColor,$borderStyle){
+    border:$borderWidth $borderColor $borderStyle;
+}
+
+//BORDERRADIUS
+$borderRadiusLink:15px;
+$borderRadiusBtn:15px;
+$borderRadiusInput:15px;
+$borderRadiusTextarea:15px;
+$borderRadiusCard:15px;
+@mixin borderRadius($borderRadiusWidth){
+    border-radius:$borderRadiusWidth;
+}
+
+%gilroy-400{
+    font-family: "Gilroy",sans-serif;
+    font-weight: 400;
+}
+%gilroy-500{
+    font-family: "Gilroy",sans-serif;
+    font-weight: 500;
+}
+%gilroy-700{
+    font-family: "Gilroy",sans-serif;
+    font-weight: 700;
+}
+%gilroy-800{
+    font-family: "Gilroy",sans-serif;
+    font-weight: 800;
+}
+
+
+%title{
+    @extend %gilroy-400;
+    font-size: 40px;
+    color:$title-color;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+%text{
+    @extend %gilroy-400;
+    font-size: 20px;
+    color:$text-color;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+%flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%link{
+    @extend %flexCenter;
+    min-height: $minHeight-link;
+    @include border(1px,red,solid);
+    @include padding(0,20px,0,20px);
+    @include borderRadius($borderRadiusLink);
+    background-color: $link-Bgcolor;
+    color:$link-color;
+    transition: all .5s;
+}
+
+%btn{
+    @extend %flexCenter;
+    min-height: $minHeight-btn;
+    @include border(1px,red,solid);
+    @include padding(0,20px,0,20px);
+    @include borderRadius($borderRadiusBtn);
+    background-color: $button-Bgcolor;
+    color:$button-color;
+    transition: all .5s;
+}
+
+%input{
+    @extend %flexCenter;
+    @include padding(0,20px,0,20px);
+    @include border(1px,red,solid);
+    @include borderRadius($borderRadiusInput);
+    min-height: $minHeight-input;
+    background-color: $input-Bgcolor;
+    color:$input-color;
+    &::placeholder{
+        @extend %text;
+    }
+}
+
+%textarea{
+    @extend %flexCenter;
+    @include padding(0,20px,0,20px);
+    @include border(1px,red,solid);
+    @include borderRadius($borderRadiusTextarea);
+    min-height: $minHeight-textarea;
+    background-color: $textarea-color;
+    background-color: $textarea-Bgcolor;
+    color:$textarea-color;
+    resize: none;
+    &::placeholder{
+        @extend %text;
+    }
+}
+

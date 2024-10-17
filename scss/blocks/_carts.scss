@@ -1,0 +1,60 @@
+.pets{
+    padding: 60px 0 60px;
+    background-color: #fff;
+    &__text{
+        margin-bottom: 2px;
+    }
+    &__title{
+        margin-bottom: 28px;
+    }
+}
+.container__pets{
+    position: relative;
+}
+
+.pets__btn{
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.pets__item:nth-last-child(-n + 4){
+    margin-bottom: 0;
+}
+
+.pets__items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    row-gap: 20px;
+}
+
+.pets__item{
+    max-width: 280px;
+    background-color: #fff;
+    border-radius: 12px;
+    &-img{
+        padding: 8px 8px 8px 8px;
+        border-radius: 12px;
+
+    }
+    &-title{
+        margin-bottom: 4px;
+        padding-left: 8px;
+    }
+    &-inner{
+        padding: 0px 8px 20px 8px;
+        display: flex;
+        gap: 4px;
+        margin-bottom: 4px;
+    }
+    &-left{
+        display: flex;
+        gap: 6px;
+    }
+    &-right{
+        display: flex;
+        gap: 6px; 
+    }
+}

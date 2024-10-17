@@ -1,0 +1,94 @@
+.footer {
+    padding-top: 80px;
+    background: linear-gradient(134.45deg, rgb(252, 238, 213) 6.431%,rgb(252, 238, 213) 78.328%,rgb(255, 231, 186) 104.241%);  
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__top {
+        display: block;
+        background-color: $main-color;
+        border-radius: 16px;
+
+        &-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px;
+        }
+    }
+
+    &__top-left {
+        max-width: 389px;
+        @extend %gilroy-700;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: left;
+        text-transform: capitalize;
+        color: #fff;
+    }
+
+    &__top-right {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        padding: 14px;
+        background-color: #fff;
+        border-radius: 14px;
+        justify-content: space-between;
+    }
+
+    &__top-input {
+        width: 80%;
+        padding: 14px;
+        border: 1px solid $main-color;
+        border-radius: 8px;
+        width: 500px;
+        margin-right: 12px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+    }
+
+    &__top-btn {
+        width: 25%;
+        padding: 14px 30px 10px;
+        background-color: $main-color;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.footer__medium {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer{
+    &__menu-list, &__icon-list{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.footer__bottom{
+    padding: 40px 0;
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-left{
+        color: rgb(102, 116, 121);
+        font-size: 14px;
+        line-height: 20px;
+        @extend %gilroy-500;
+    }
+}
